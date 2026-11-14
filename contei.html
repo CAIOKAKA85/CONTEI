@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contei – assessoria jurídica e financeira para pequenos negócios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F8FB;--surface:#fff;--ink:#14213D;--muted:#5A667D;--line:#DDE3EC;--brand:#14213D;--accent:#FFC857;--accent-ink:#14213D;--pos:#12805C;--neg:#C73E3E;--soft:#EAF0F8;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1626;--surface:#16213A;--ink:#EEF2FA;--muted:#9AA7C0;--line:#2A3858;--brand:#FFC857;--accent:#FFC857;--accent-ink:#14213D;--pos:#4CCB9B;--neg:#FF7A7A;--soft:#1B2947;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1626;--surface:#16213A;--ink:#EEF2FA;--muted:#9AA7C0;--line:#2A3858;--brand:#FFC857;--accent:#FFC857;--accent-ink:#14213D;--pos:#4CCB9B;--neg:#FF7A7A;--soft:#1B2947;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:800}h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:700}h3{font-size:1.2rem;font-weight:700}
+a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:800 1.6rem "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.04em}.logo i{color:var(--accent);font-style:normal;text-shadow:0 0 0 var(--ink);-webkit-text-stroke:1px var(--ink)}
+header nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem}header nav ul a{text-decoration:none;color:var(--muted)}header nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem "Public Sans",sans-serif;background:var(--accent);color:var(--accent-ink);padding:13px 22px;border-radius:10px;text-decoration:none}
+.btn.ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero{padding:56px 0 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:34em;margin:20px 0 28px}
+.calc{background:var(--surface);border:1.5px solid var(--ink);border-radius:18px;padding:24px;box-shadow:8px 8px 0 var(--accent)}
+.calc h3{margin-bottom:4px}.calc small{color:var(--muted)}
+.fld{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;font-size:.95rem}
+.fld input[type=number]{width:130px;text-align:right}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:9px;padding:10px 12px;width:100%}
+input[type=range]{padding:0;accent-color:var(--brand);width:140px;border:0;background:none}
+.res{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.res b{font:800 2.1rem "Bricolage Grotesque",sans-serif}.pos{color:var(--pos)}.neg{color:var(--neg)}
+.bars{display:flex;align-items:center;gap:8px;height:110px;margin-top:12px}
+.bar{flex:1;display:flex;flex-direction:column;justify-content:center;height:100%;font-size:.72rem;color:var(--muted);text-align:center}
+.bar div.up,.bar div.dn{border-radius:4px}.bar .half{flex:1;display:flex;align-items:flex-end}.bar .half.d{align-items:flex-start}.bar .half div{width:100%}
+.tip{margin-top:12px;font-size:.9rem;background:var(--soft);padding:10px 12px;border-radius:9px}
+section{padding:72px 0}.alt{background:var(--soft)}
+.sec-head{max-width:640px;margin-bottom:36px}.sec-head p{color:var(--muted);margin:12px 0 0}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.svc div{padding:22px 0;border-top:1.5px solid var(--ink)}.svc p{margin:6px 0 0;color:var(--muted)}
+.team{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}.team span{border:1.5px solid var(--ink);border-radius:99px;padding:6px 16px;font-weight:500;background:var(--surface)}
+.finder{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:26px}
+.finder label{display:inline-flex;align-items:center;gap:8px;margin:8px 20px 0 0;cursor:pointer}.finder input{width:auto}
+.finder p{margin:14px 0 0;font-weight:600}
+.billing{display:flex;align-items:center;gap:12px;margin-bottom:22px;color:var(--muted)}
+.sw{position:relative;width:52px;height:30px;background:var(--line);border-radius:99px;border:0;cursor:pointer;padding:0}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--ink);transition:transform .2s}
+.sw[aria-pressed=true]{background:var(--accent)}.sw[aria-pressed=true]::after{transform:translateX(22px)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.plan.rec{border-color:var(--ink);box-shadow:6px 6px 0 var(--accent)}
+.plan .price{font:800 2.4rem "Bricolage Grotesque",sans-serif;margin:12px 0 2px}.plan .price small{font:400 .95rem "Public Sans";color:var(--muted)}
+.plan ul{list-style:none;padding:0;margin:16px 0 24px;flex:1}.plan li{padding:7px 0 7px 26px;position:relative;font-size:.97rem}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--pos);font-weight:700}
+.plan li.no{color:var(--muted)}.plan li.no::before{content:"–";color:var(--muted)}
+.badge{align-self:flex-start;background:var(--accent);color:var(--accent-ink);font-size:.8rem;font-weight:600;border-radius:99px;padding:3px 12px;margin-bottom:8px}
+.note{font-size:.88rem;color:var(--muted);margin-top:18px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.steps div{counter-increment:s}.steps div::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:700;margin-bottom:12px}
+.steps p{color:var(--muted);margin:6px 0 0}
+details{border-top:1.5px solid var(--line);padding:18px 0}details:last-of-type{border-bottom:1.5px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:1.05rem}details p{margin:10px 0 0;color:var(--muted);max-width:52em}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+form{display:grid;gap:14px}form label{font-size:.92rem;font-weight:500;display:grid;gap:6px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sent{background:var(--soft);border:1.5px solid var(--pos);border-radius:12px;padding:18px;display:none}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.tg{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:.9rem}
+@media(max-width:860px){.hero,.contact,.svc,.plans,.steps{grid-template-columns:1fr}header nav ul{display:none}.row{grid-template-columns:1fr}}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.chips button{font:500 .95rem "Public Sans",sans-serif;background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:99px;padding:7px 18px;cursor:pointer}.chips button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.pros{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.pro{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:20px}.pro p{margin:6px 0 10px;color:var(--muted);font-size:.95rem}.pro small{color:var(--muted);font-weight:600}
+@media(max-width:860px){.pros{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Área do cliente */
+#portal h1,#portal h2,#portal h3{font-family:"Bricolage Grotesque","Public Sans",sans-serif;margin:0;letter-spacing:-.02em;line-height:1.15}
+#portal input,#portal select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:9px;padding:10px 12px;width:100%}
+#portal label{display:grid;gap:5px;font-size:.9rem;font-weight:500}
+#portal .btn{border:0;cursor:pointer;font:600 .95rem "Public Sans",sans-serif;background:var(--accent);color:#14213D;padding:11px 18px;border-radius:9px;text-decoration:none;display:inline-block}
+#portal .btn.ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+#portal .btn.sm{padding:6px 11px;font-size:.84rem}
+#portal .card{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:20px}
+#portal #login{max-width:420px;margin:56px auto}
+#portal #login form{display:grid;gap:14px;margin-top:16px}
+#portal .demo{font-size:.85rem;color:var(--muted);margin-top:12px}
+#portal #app{display:none;padding:26px 0 60px}
+#portal .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 22px}
+#portal .kpi small{color:var(--muted)}
+#portal .kpi b{display:block;font:800 1.55rem "Bricolage Grotesque",sans-serif}
+#portal .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:start}
+#portal .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#portal form.add{display:grid;gap:12px;margin-top:14px}
+#portal .bill{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:14px 0;border-top:1px solid var(--line)}
+#portal .bill b{font-weight:600}
+#portal .bill small{color:var(--muted)}
+#portal .bill .act{grid-column:1/3;display:flex;gap:8px;flex-wrap:wrap}
+#portal .tag{font-size:.75rem;font-weight:600;border-radius:99px;padding:2px 10px;background:var(--soft)}
+#portal .tag.late{background:var(--neg);color:#fff}
+#portal .tag.ok{background:var(--pos);color:#fff}
+#portal .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-top:12px;text-align:center;font-size:.85rem}
+#portal .cal span{padding:6px 0;border-radius:7px;position:relative}
+#portal .cal .h{color:var(--muted);font-size:.72rem}
+#portal .cal .d{background:var(--soft)}
+#portal .cal .t{outline:2px solid var(--ink)}
+#portal .cal .due{background:var(--accent);color:#14213D;font-weight:700}
+#portal .cal .lt{background:var(--neg);color:#fff;font-weight:700}
+#portal .mh{display:flex;justify-content:space-between;align-items:center}
+#portal .rem{font-size:.88rem;padding:8px 0;border-top:1px dashed var(--line)}
+#portal .note{font-size:.82rem;color:var(--muted);margin-top:10px}
+#portal .neg{color:var(--neg)}
+@media(max-width:860px){#portal .kpis{grid-template-columns:1fr 1fr}
+#portal .grid{grid-template-columns:1fr}}
+#portal #tabs{display:none;gap:8px;margin:18px 0 0;flex-wrap:wrap}
+#portal #tabs button{font:500 .95rem "Public Sans",sans-serif;background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:99px;padding:7px 18px;cursor:pointer}
+#portal #tabs button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+#portal #minutas,#portal #time{display:none;padding:22px 0 60px}
+#portal .mg{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+#portal .msg{padding:8px 0;border-top:1px dashed var(--line);font-size:.92rem}
+#portal pre{white-space:pre-wrap;font:400 .88rem/1.5 "Public Sans",sans-serif;max-height:55vh;overflow:auto;background:var(--bg);padding:14px;border-radius:10px;border:1px solid var(--line)}
+#portal textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:9px;padding:10px 12px;width:100%}
+@media(max-width:860px){#portal .mg{grid-template-columns:1fr}}#portal .tbl{width:100%;border-collapse:collapse;font-size:.92rem}#portal .tbl th,#portal .tbl td{text-align:left;padding:10px 8px;border-top:1px solid var(--line);vertical-align:top}#portal .tbl th{border-top:0;color:var(--muted);font-weight:600}#portal .tbl select,#portal .tbl input{padding:6px 8px;min-width:130px}
+#portal details.tix{border-top:1px solid var(--line);padding:12px 0}#portal details.tix summary{cursor:pointer;font-size:.95rem}#portal details.tix p{max-width:none}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#topo">contei<i>.</i></a>
+<ul><li><a href="#servicos">Serviços</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#recursos">Recursos</a></li><li><a href="#planos">Planos</a></li><li><a href="#como">Como funciona</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+<div style="display:flex;gap:10px;align-items:center"><a class="tg" style="text-decoration:none" href="#area-cliente">Área do cliente</a><button class="tg" id="tema" aria-label="Alternar tema claro e escuro">Tema</button><a class="btn" href="#agendar">Agendar conversa</a></div>
+</nav></div></header>
+<div id="site">
+<main id="topo">
+<div class="wrap hero">
+<div>
+<h1>Seu negócio organizado, com advogado e administrador do seu lado.</h1>
+<p class="lead">O Contei reúne jurídico, contratos e finanças numa assinatura só, feita para pequenos empresários e autônomos que não têm um time por trás.</p>
+<a class="btn" href="#planos">Ver planos</a> <a class="btn ghost" href="#agendar">Falar com um especialista</a>
+</div>
+<div class="calc" aria-labelledby="ct">
+<h3 id="ct">Quanto sobra no fim do mês?</h3><small>Simule o fluxo de caixa do seu negócio.</small>
+<div class="fld"><label for="rec">Receita mensal</label><input id="rec" type="number" min="0" step="100" value="12000"></div>
+<div class="fld"><label for="fix">Custos fixos</label><input id="fix" type="number" min="0" step="100" value="4500"></div>
+<div class="fld"><label for="var">Custos variáveis (<span id="vv">30</span>%)</label><input id="var" type="range" min="0" max="90" value="30"></div>
+<div class="fld"><label for="imp">Impostos (<span id="iv">8</span>%)</label><input id="imp" type="range" min="0" max="40" value="8"></div>
+<div class="fld"><label for="cre">Crescimento por mês (<span id="cv">2</span>%)</label><input id="cre" type="range" min="-10" max="15" value="2"></div>
+<div class="res"><span>Saldo no mês 1</span><br><b id="saldo">–</b>
+<div class="bars" id="bars" role="img" aria-label="Projeção do saldo para 6 meses"></div>
+<div class="tip" id="tip"></div></div>
+</div>
+</div>
+
+<section id="servicos" class="alt"><div class="wrap">
+<div class="sec-head"><h2>Tudo o que seu negócio precisa resolver, num só lugar</h2><p>Profissionais reais cuidam de cada área e conversam entre si, para você não precisar explicar tudo três vezes.</p></div>
+<div class="svc">
+<div><h3>Contratos</h3><p>Criação, revisão e análise de contratos com clientes, fornecedores e parceiros.</p></div>
+<div><h3>Fluxo de caixa, cobranças e recebíveis</h3><p>Fluxo de caixa sob medida, sistemas de cobrança e antecipação de recebíveis.</p></div>
+<div><h3>Consultoria jurídica</h3><p>Tire dúvidas com advogados antes de assinar, contratar ou demitir.</p></div>
+<div><h3>Acompanhamento processual</h3><p>Seus processos acompanhados em seu nome, com aviso de cada movimentação.</p></div>
+<div><h3>Sindicância</h3><p>Apuração e levantamento de informações quando algo precisa ser esclarecido.</p></div>
+<div><h3>Gestão e administração</h3><p>Administradores que ajudam a organizar processos, metas e custos.</p></div>
+</div>
+<div class="team" style="margin-top:28px"><span>Advogados</span><span>Administradores</span><span>Especialistas financeiros</span></div>
+</div></section>
+
+<section id="equipe"><div class="wrap">
+<div class="sec-head"><h2>Os profissionais por trás do Contei</h2><p>Escolha uma área e veja quem pode ajudar o seu negócio.</p></div>
+<div class="chips" id="chips" role="group" aria-label="Filtrar por área"></div>
+<div class="pros" id="pros"></div>
+</div></section>
+
+<section id="recursos" class="alt"><div class="wrap">
+<div class="sec-head"><h2>Mais que consultoria: uma plataforma para o dia a dia</h2><p>Ferramentas que ficam com você entre uma conversa e outra.</p></div>
+<div class="svc">
+<div><h3>Painel do cliente</h3><p>Contratos, processos e fluxo de caixa reunidos numa tela só.</p></div>
+<div><h3>Agenda de pagamentos</h3><p>Suas contas a pagar sempre vinculadas à agenda do seu celular ou computador.</p></div>
+<div><h3>Biblioteca de modelos</h3><p>Contratos, recibos, procurações e propostas prontos para adaptar.</p></div>
+<div><h3>Chat e reuniões</h3><p>Converse com o time e acesse o link das reuniões marcadas pelos profissionais.</p></div>
+<div><h3>Assinatura eletrônica</h3><p>Em breve: assine contratos direto na plataforma.</p></div>
+<div><h3>Integração com bancos e notas fiscais</h3><p>Em breve: o fluxo de caixa se atualiza sozinho.</p></div>
+</div></div></section>
+
+<section id="planos"><div class="wrap">
+<div class="sec-head"><h2>Planos que crescem com você</h2><p>Comece pelo básico e suba de plano quando o negócio pedir.</p></div>
+<div class="finder"><strong>Do que você precisa agora?</strong><br>
+<label><input type="checkbox" data-n="c"> Contratos</label>
+<label><input type="checkbox" data-n="f"> Controle financeiro</label>
+<label><input type="checkbox" data-n="p"> Processos em andamento</label>
+<label><input type="checkbox" data-n="s"> Sindicância</label>
+<p id="recTxt">Marque o que faz sentido e indicamos o plano.</p></div>
+<div class="billing"><span>Mensal</span><button class="sw" id="sw" aria-pressed="false" aria-label="Cobrança anual com 20% de desconto"></button><span>Anual (20% de desconto)</span></div>
+<div class="plans" id="plans"></div>
+<p class="note">Valores de exemplo, ajuste antes de publicar.</p>
+</div></section>
+
+<section id="como" class="alt"><div class="wrap">
+<div class="sec-head"><h2>Como funciona</h2></div>
+<div class="steps">
+<div><h3>Conte sobre o seu negócio</h3><p>Uma conversa rápida para entender seu momento e suas dores.</p></div>
+<div><h3>Receba seu time</h3><p>Escolhemos o advogado e o administrador certos para o seu plano.</p></div>
+<div><h3>Acompanhe tudo</h3><p>Contratos, caixa e processos em um só lugar, com avisos no seu celular.</p></div>
+</div></div></section>
+
+<section id="duvidas"><div class="wrap" style="max-width:820px">
+<div class="sec-head"><h2>Dúvidas frequentes</h2></div>
+<details><summary>Preciso ter CNPJ para contratar?</summary><p>Não. Autônomos e profissionais sem CNPJ também podem assinar. Se precisar abrir empresa, ajudamos nisso.</p></details>
+<details><summary>Posso trocar de plano depois?</summary><p>Sim, a qualquer momento. O novo valor vale a partir do próximo ciclo de cobrança.</p></details>
+<details><summary>Os advogados atendem em qualquer estado?</summary><p>A consultoria e a análise de contratos funcionam online para todo o Brasil. Para atuação em processos, confirmamos a região antes de contratar.</p></details>
+<details><summary>Meus dados ficam protegidos?</summary><p>Sim. Seguimos a LGPD e o sigilo profissional da advocacia em todas as informações que você compartilha.</p></details>
+<details><summary>Existe fidelidade mínima?</summary><p>No plano mensal, não. No anual, você garante o desconto pagando o período todo.</p></details>
+</div></section>
+
+<section id="agendar" class="alt"><div class="wrap contact">
+<div><h2>Agende uma conversa</h2><p style="color:var(--muted)">Sem compromisso. Respondemos em até um dia útil para combinar o melhor horário.</p></div>
+<div>
+<form id="f" novalidate>
+<div class="row"><label>Nome<input id="nome" required autocomplete="name"></label><label>WhatsApp<input id="tel" type="tel" required autocomplete="tel" placeholder="(11) 90000-0000"></label></div>
+<div class="row"><label>E-mail<input id="mail" type="email" required autocomplete="email"></label>
+<label>Plano de interesse<select id="pl"><option>Ainda não sei</option><option>Essencial</option><option>Profissional</option><option>Premium</option></select></label></div>
+<label>Como podemos ajudar?<textarea id="msg" rows="4"></textarea></label>
+<div id="err" class="neg" role="alert"></div>
+<p class="note" style="margin:0">Ao enviar, você concorda com o uso dos seus dados para contato, conforme a <a href="#" data-pv>Política de Privacidade</a>.</p><button class="btn" type="submit">Enviar e-mail</button>
+</form>
+<div class="sent" id="ok" role="status"></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Contei. A Contei não substitui o acompanhamento individual de um advogado em casos específicos. · <a href="#" data-pv>Política de Privacidade</a></div></footer>
+</div>
+<div id="portal" style="display:none"><div class="wrap">
+<div id="who" style="display:none;gap:12px;align-items:center;justify-content:flex-end;padding-top:16px;flex-wrap:wrap"><span id="nm" style="font-size:.9rem;color:var(--muted)"></span><button class="btn ghost sm" id="out">Sair</button><button class="btn ghost sm" id="del">Excluir conta</button></div>
+<div id="login" class="card"><h2 id="lt">Área do cliente</h2><p style="color:var(--muted);margin:6px 0 0">Acompanhe suas contas, minutas e o contato com o seu time.</p>
+<form id="lf" novalidate>
+<label id="ln" style="display:none">Nome<input id="lnm" autocomplete="name" maxlength="60"></label>
+<label>E-mail<input id="le" type="email" autocomplete="email"></label>
+<label id="lpw">Senha (mínimo 6 caracteres)<input id="lp" type="password" autocomplete="current-password"></label>
+<label id="lcd" style="display:none">Código de 6 dígitos recebido por e-mail<input id="lc" inputmode="numeric" maxlength="6"></label>
+<label id="lgl" style="display:none;grid-template-columns:auto 1fr;gap:8px;align-items:start;font-weight:400"><input id="lgc" type="checkbox" style="width:auto;margin-top:4px"><span>Li e aceito a <a href="#" data-pv>Política de Privacidade</a> e autorizo o tratamento dos meus dados para a prestação dos serviços.</span></label>
+<div id="le2" class="neg" role="alert"></div>
+<button class="btn" id="lb" type="submit">Entrar</button><button class="btn ghost" id="lm" type="button">Criar conta</button><button class="btn ghost sm" id="lr" type="button">Esqueci minha senha</button>
+</form>
+<div style="display:grid;gap:10px;margin-top:14px"><button class="btn ghost" id="og" type="button">Continuar com Google</button><button class="btn ghost" id="oa" type="button">Continuar com Apple</button><div id="gbtn"></div></div><p class="note">Ao continuar com Google ou Apple, você aceita a <a href="#" data-pv>Política de Privacidade</a>.</p>
+<p class="demo"><a href="#" id="las" style="display:none">Primeiro acesso da equipe Contei</a></p>
+<p class="demo">Demonstração: contas e dados ficam apenas neste navegador. Em produção, ficam em banco de dados seguro, conforme a LGPD.</p></div>
+<nav id="tabs" aria-label="Seções"></nav>
+<div id="app"><h2>Contas a pagar</h2>
+<div class="kpis"><div class="card kpi"><small>Vencem em 7 dias</small><b id="k1">–</b></div><div class="card kpi"><small>Vencidas</small><b id="k2" class="neg">–</b></div><div class="card kpi"><small>A pagar no mês</small><b id="k3">–</b></div><div class="card kpi"><small>Pagas no mês</small><b id="k4">–</b></div></div>
+<div class="grid"><div>
+<div class="card"><h3>Nova conta</h3><form class="add" id="bf"><label>Descrição<input id="bd" required maxlength="80" placeholder="Ex.: Aluguel da loja"></label><div class="row"><label>Valor (R$)<input id="bv" type="number" step="0.01" min="0.01" required></label><label>Vencimento<input id="bt" type="date" required></label></div><label>Repetição<select id="br"><option value="0">Só esta vez</option><option value="1">Todo mês</option></select></label><label style="display:flex;gap:8px;align-items:center;font-weight:400"><input id="bg" type="checkbox" checked style="width:auto">Adicionar à minha agenda ao salvar (Google Agenda)</label><button class="btn" type="submit">Adicionar conta</button></form></div>
+<div class="card" style="margin-top:20px"><div class="mh"><h3>Suas contas</h3><button class="btn ghost sm" id="csv">Exportar CSV</button></div><div id="list"></div></div></div>
+<div><div class="card"><div class="mh"><h3 id="mt"></h3><span><button class="btn ghost sm" id="pm" aria-label="Mês anterior">‹</button> <button class="btn ghost sm" id="nx" aria-label="Próximo mês">›</button></span></div><div class="cal" id="cal"></div></div></div></div></div>
+<section id="minutas"><h2>Minutas de contratos</h2><p style="color:var(--muted);margin:6px 0 0">Modelos prontos para preencher. Substitua os campos entre colchetes pelos dados do seu negócio.</p><div class="mg" id="mg"></div><p class="note">Modelos genéricos, sem análise do seu caso. Para criar ou revisar um contrato sob medida, fale com um advogado do plano Profissional ou Premium.</p></section>
+<section id="time"><h2>Meu time</h2><div id="tm" style="margin-top:16px"></div></section>
+<section id="adm-cl" style="display:none;padding:22px 0 60px"><h2>Clientes</h2>
+<div class="card" style="margin-top:16px"><h3>Criar cadastro</h3><form class="add" id="cf2"><div class="row"><label>Nome<input id="an" maxlength="60"></label><label>E-mail<input id="ae" type="email"></label></div><div class="row"><label>Senha provisória<input id="ap" type="password" autocomplete="new-password"></label><label>Plano<select id="apl"><option value="">Escolha</option><option>Essencial</option><option>Profissional</option><option>Premium</option></select></label></div><label>Mensalidade paga até<input id="apu" type="date"></label><button class="btn" type="submit">Criar cadastro</button></form></div>
+<div class="card" style="margin-top:20px;overflow-x:auto"><div id="amsg" class="neg" role="alert"></div><div id="ctb"></div></div></section>
+<section id="adm-at" style="display:none;padding:22px 0 60px"><h2>Atendimento e reuniões</h2><label style="max-width:420px;margin-top:12px">Cliente<select id="ac"></select></label><div id="atb"></div></section>
+<section id="adm-mi" style="display:none;padding:22px 0 60px"><h2>Minutas de contratos</h2><p style="color:var(--muted);margin:6px 0 0">O que você publicar aqui fica disponível para todos os clientes.</p>
+<div class="card" style="margin-top:16px"><form class="add" id="mf2"><input id="xi" type="hidden"><div class="row"><label>Título<input id="xt" maxlength="80"></label><label>Categoria<input id="xc" maxlength="30" placeholder="Ex.: Serviços"></label></div><label>Descrição curta<input id="xd" maxlength="120"></label><label>Texto da minuta<textarea id="xx" rows="10"></textarea></label><button class="btn" id="xb" type="submit">Adicionar minuta</button></form></div>
+<div class="card" style="margin-top:20px"><div id="xl"></div></div></section>
+</div>
+<dialog id="md" style="background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:14px;padding:22px;max-width:640px;width:calc(100% - 32px)"><h3 id="mh" style="margin-bottom:12px"></h3><pre id="mx"></pre><div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn ghost" id="mc" type="button">Fechar</button></div></dialog>
+<dialog id="dg" style="background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:14px;padding:24px;max-width:420px;width:calc(100% - 32px)"><form id="df" style="display:grid;gap:14px"><h3>Excluir minha conta</h3><p style="margin:0;color:var(--muted)">Isso apaga para sempre seu cadastro e suas contas a pagar. Esta ação não pode ser desfeita.</p><label>Confirme sua senha<input id="dp" type="password" autocomplete="current-password"></label><div id="de" class="neg" role="alert"></div><div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn ghost" id="dc" type="button">Cancelar</button><button class="btn" style="background:var(--neg);color:#fff" type="submit">Excluir definitivamente</button></div></form></dialog>
+</div>
+<dialog id="pv" style="background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:14px;padding:24px;max-width:560px;width:calc(100% - 32px)"><h3 style="margin-bottom:10px">Política de Privacidade (resumo)</h3><div style="max-height:55vh;overflow:auto;font-size:.95rem;display:grid;gap:8px">
+<p style="margin:0"><b>Quem somos.</b> Contei [razão social e CNPJ], controladora dos seus dados.</p>
+<p style="margin:0"><b>Dados coletados.</b> Nome, e-mail, telefone, contas a pagar cadastradas por você, mensagens ao time e documentos enviados.</p>
+<p style="margin:0"><b>Finalidades e bases legais.</b> Criar e manter sua conta, prestar os serviços contratados, cobrar a mensalidade, atender você e cumprir obrigações legais (LGPD, art. 7º, incisos I, II e V).</p>
+<p style="margin:0"><b>Compartilhamento.</b> Apenas com profissionais da Contei e fornecedores essenciais (hospedagem, pagamento e envio de e-mail), sob contrato.</p>
+<p style="margin:0"><b>Segurança.</b> Criptografia em trânsito e em repouso, acesso restrito por função e registro de acessos.</p>
+<p style="margin:0"><b>Retenção.</b> Enquanto a conta estiver ativa e pelos prazos legais depois dela; depois, os dados são eliminados ou anonimizados.</p>
+<p style="margin:0"><b>Seus direitos (art. 18).</b> Confirmar, acessar, corrigir, anonimizar, portar, eliminar e revogar o consentimento. Solicite em [e-mail do encarregado (DPO)].</p>
+<p style="margin:0;color:var(--muted)">Texto-modelo: deve ser revisado por um advogado antes da publicação.</p></div>
+<div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn ghost" id="pvc" type="button">Fechar</button></div></dialog>
+<script>(function(){
+
+const $=i=>document.getElementById(i),brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+/* Tema */
+try{const t=localStorage.getItem("contei-tema");if(t)document.documentElement.dataset.theme=t}catch(e){}
+$("tema").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme?d.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;d.dataset.theme=dark?"light":"dark";try{localStorage.setItem("contei-tema",d.dataset.theme)}catch(e){}};
+/* Calculadora */
+function calc(){
+ const r=+$("rec").value||0,f=+$("fix").value||0,v=+$("var").value,i=+$("imp").value,c=+$("cre").value;
+ $("vv").textContent=v;$("iv").textContent=i;$("cv").textContent=c;
+ const s=[];for(let m=0;m<6;m++){const rm=r*Math.pow(1+c/100,m);s.push(rm*(1-v/100-i/100)-f)}
+ const el=$("saldo");el.textContent=brl(s[0]);el.className=s[0]>=0?"pos":"neg";
+ const mx=Math.max(...s.map(Math.abs),1);
+ $("bars").innerHTML=s.map((x,k)=>{const h=Math.abs(x)/mx*100,col=x>=0?"var(--pos)":"var(--neg)";
+  return `<div class="bar"><div class="half">${x>=0?`<div style="height:${h}%;background:${col};border-radius:4px"></div>`:""}</div><span>M${k+1}</span><div class="half d">${x<0?`<div style="height:${h}%;background:${col};border-radius:4px"></div>`:""}</div></div>`}).join("");
+ const marg=r?s[0]/r*100:0;
+ $("tip").textContent=s[0]<0?"Atenção: seu caixa fecha no vermelho. Nossos especialistas ajudam a rever custos e preços."
+  :marg<10?"Margem apertada ("+marg.toFixed(0)+"%). Um plano financeiro pode abrir espaço para reserva e crescimento."
+  :"Boa margem ("+marg.toFixed(0)+"%). Dá para planejar reserva de emergência e investimentos.";
+}
+["rec","fix","var","imp","cre"].forEach(i=>$(i).addEventListener("input",calc));calc();
+/* Equipe */
+const A=["Jurídico","Financeiro","Gestão"],PR=[
+[0,"Advogado empresarial","Contratos, sociedade e orientação antes de cada decisão importante."],
+[0,"Advogado trabalhista","Contratação, demissão e prevenção de problemas com funcionários."],
+[0,"Advogado tributarista","Enquadramento tributário e formas legais de pagar menos imposto."],
+[0,"Advogado de contencioso","Acompanhamento de processos e defesa em ações cíveis."],
+[0,"Especialista em propriedade intelectual","Registro de marca no INPI e proteção do nome do seu negócio."],
+[0,"Analista de sindicância e compliance","Apuração de fatos, verificação de parceiros e regras internas."],
+[1,"Contador","Abertura e baixa de CNPJ, obrigações fiscais e declarações."],
+[1,"Planejador financeiro","Desenho do fluxo de caixa, reserva de emergência e precificação."],
+[1,"Especialista em cobranças e recebíveis","Sistemas de cobrança (boleto, Pix e links de pagamento) e antecipação de recebíveis."],
+[1,"Analista de crédito e dívidas","Capital de giro, renegociação de dívidas e melhores taxas."],
+[2,"Administrador","Processos, metas e controle de custos do dia a dia."],
+[2,"Consultor de vendas e precificação","Preço, margem e estratégia comercial para vender com lucro."],
+[2,"Especialista em RH e departamento pessoal","Folha, admissões, benefícios e rotinas de pessoal."]];
+let af=-1;
+function equipe(){
+ $("chips").innerHTML=["Todos",...A].map((n,k)=>`<button aria-pressed="${af===k-1}" data-a="${k-1}">${n}</button>`).join("");
+ $("pros").innerHTML=PR.filter(p=>af<0||p[0]===af).map(p=>`<article class="pro"><small>${A[p[0]]}</small><h3>${p[1]}</h3><p>${p[2]}</p></article>`).join("");
+ document.querySelectorAll("#chips button").forEach(b=>b.onclick=()=>{af=+b.dataset.a;equipe()});
+}
+equipe();
+/* Planos */
+const P=[
+ {n:"Essencial",m:79,d:"Para quem está começando e quer orientação.",f:[["Consultoria jurídica por chat",1],["Modelo de fluxo de caixa",1],["Modelos de contrato prontos",1],["Análise de contratos",0],["Acompanhamento financeiro mensal",0],["Acompanhamento processual e sindicância",0]]},
+ {n:"Profissional",m:189,d:"Para quem fecha contratos e precisa de controle.",f:[["Tudo do Essencial",1],["Criação e análise de contratos",1],["Fluxo de caixa sob medida",1],["Revisão financeira mensal",1],["Acompanhamento processual e sindicância",0]],tag:"Mais escolhido"},
+ {n:"Premium",m:429,d:"Time dedicado cuidando do jurídico e do financeiro.",f:[["Tudo do Profissional",1],["Acompanhamento processual em seu nome",1],["Sindicância",1],["Advogado e administrador dedicados",1],["Reuniões periódicas de estratégia",1]]}];
+let anual=false,rec=-1;
+function plans(){
+ $("plans").innerHTML=P.map((p,k)=>{const v=anual?Math.round(p.m*.8):p.m;
+ return `<article class="plan${rec===k?" rec":""}">${p.tag?`<span class="badge">${p.tag}</span>`:""}${rec===k?`<span class="badge">Indicado para você</span>`:""}<h3>${p.n}</h3><p style="color:var(--muted);margin:6px 0 0">${p.d}</p>
+ <div class="price">${brl(v)}<small>/mês</small></div>${anual?`<small style="color:var(--muted)">cobrado ${brl(v*12)} por ano</small>`:""}
+ <ul>${p.f.map(x=>`<li${x[1]?"":' class="no"'}>${x[0]}</li>`).join("")}</ul>
+ <a class="btn${k===1||rec===k?"":" ghost"}" target="_blank" rel="noopener" href="https://wa.me/5511976286622?text=${encodeURIComponent("Olá! Quero contratar o plano "+p.n+" do Contei.")}">Quero o ${p.n}</a></article>`}).join("");
+}
+$("sw").onclick=e=>{anual=!anual;e.currentTarget.setAttribute("aria-pressed",anual);plans()};
+document.querySelectorAll(".finder input").forEach(c=>c.onchange=()=>{
+ const on=[...document.querySelectorAll(".finder input:checked")].map(x=>x.dataset.n);
+ rec=!on.length?-1:(on.includes("p")||on.includes("s"))?2:1;
+ $("recTxt").textContent=rec<0?"Marque o que faz sentido e indicamos o plano.":"Pelo que você marcou, o plano "+P[rec].n+" é o mais indicado.";plans()});
+plans();
+/* Formulário */
+const F=$("f");
+try{const d=JSON.parse(localStorage.getItem("contei-rascunho")||"{}");["nome","tel","mail","msg"].forEach(i=>{if(d[i])$(i).value=d[i]})}catch(e){}
+F.addEventListener("input",()=>{try{localStorage.setItem("contei-rascunho",JSON.stringify({nome:$("nome").value,tel:$("tel").value,mail:$("mail").value,msg:$("msg").value}))}catch(e){}});
+F.onsubmit=e=>{e.preventDefault();const er=$("err");er.textContent="";
+ if(!$("nome").value.trim())return er.textContent="Informe seu nome.";
+ if($("tel").value.replace(/\D/g,"").length<10)return er.textContent="Informe um WhatsApp com DDD.";
+ if(!/^\S+@\S+\.\S+$/.test($("mail").value))return er.textContent="Informe um e-mail válido, como nome@email.com.";
+ const sub="Pedido de contato – Contei ("+$("pl").value+")",body="Nome: "+$("nome").value.trim()+"\nWhatsApp: "+$("tel").value.trim()+"\nE-mail: "+$("mail").value.trim()+"\nPlano de interesse: "+$("pl").value+"\n\n"+$("msg").value.trim(),url="mailto:kkcompraskk@gmail.com?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body);
+ try{localStorage.removeItem("contei-rascunho")}catch(e){}
+ F.style.display="none";const o=$("ok");o.style.display="block";
+ const gm="https://mail.google.com/mail/?view=cm&fs=1&to=kkcompraskk%40gmail.com&su="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body),ol="https://outlook.live.com/mail/0/deeplink/compose?to=kkcompraskk%40gmail.com&subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body);
+ o.innerHTML="<strong>Mensagem pronta, "+$("nome").value.trim().split(" ")[0].replace(/[<>&]/g,"")+".</strong><br>Escolha onde enviar para <b>kkcompraskk@gmail.com</b>:<div style=\"display:flex;gap:10px;flex-wrap:wrap;margin-top:12px\"><a class=\"btn\" target=\"_blank\" rel=\"noopener\" href=\""+gm+"\">Abrir no Gmail</a><a class=\"btn ghost\" target=\"_blank\" rel=\"noopener\" href=\""+ol+"\">Abrir no Outlook</a><button class=\"btn ghost\" type=\"button\" id=\"cpm\">Copiar mensagem</button></div>";
+ $("cpm").onclick=async()=>{try{await navigator.clipboard.writeText(body);$("cpm").textContent="Copiado!"}catch(e){$("cpm").textContent="Copie o texto manualmente"}}};
+
+})();</script>
+<script>(function(){
+const $=i=>document.getElementById(i),brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const WA="https://wa.me/5511976286622",PL=["Essencial","Profissional","Premium"];
+const mem={};const st={get(k){try{return localStorage.getItem(k)}catch(e){return mem[k]??null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){mem[k]=v}},del(k){try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
+const J=(k,d)=>{try{const v=st.get(k);return v?JSON.parse(v):d}catch(e){return d}},S=(k,v)=>st.set(k,JSON.stringify(v));
+const accts=()=>J("c-accts",{}),saveA=a=>S("c-accts",a),me=()=>accts()[U];
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const pd=s=>{const[a,b,c]=s.split("-").map(Number);return new Date(a,b-1,c)};
+const today=()=>{const d=new Date();d.setHours(0,0,0,0);return d};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fdt=s=>new Date(s).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"});
+const addM=s=>{const d=pd(s),n=new Date(d.getFullYear(),d.getMonth()+1,1);n.setDate(Math.min(d.getDate(),new Date(n.getFullYear(),n.getMonth()+1,0).getDate()));return iso(n)};
+const f8=d=>iso(d).replace(/-/g,"");
+const waL=t=>WA+"?text="+encodeURIComponent(t);
+async function hs(p,s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s+p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+let U=st.get("c-user"),B=[],cur=new Date(),mode="in",RC=null;cur.setDate(1);
+const gate=a=>a.role==="admin"?"":a.status==="pausado"?"Seu acesso está pausado.":(!a.plan||a.status==="pendente")?"Seu cadastro aguarda a liberação da equipe Contei.":(!a.pu||a.pu<iso(today()))?"A mensalidade está pendente de renovação.":"";
+const sit=a=>a.status==="pausado"?["Pausado",""]:a.status==="pendente"?["Aguardando liberação","late"]:(!a.pu||a.pu<iso(today()))?["Mensalidade vencida","late"]:["Ativo","ok"];
+const VIEWS={pay:"app",min:"minutas",time:"time",cl:"adm-cl",at:"adm-at",mi:"adm-mi"};
+function purge(em){["c-bills-","c-msgs-","c-tix-","c-meet-","c-req-"].forEach(k=>st.del(k+em))}
+function arm(b,fn,t){b.onclick=()=>{if(b.dataset.arm){fn();return}b.dataset.arm=1;const o=b.textContent;b.textContent="Confirmar";setTimeout(()=>{b.dataset.arm="";b.textContent=o},4000)}}
+const okUrl=(p,u)=>{try{const x=new URL(u),h=x.hostname;if(x.protocol!=="https:")return false;if(p==="Google Meet")return h==="meet.google.com";if(p==="Zoom")return h==="zoom.us"||h.endsWith(".zoom.us");return true}catch(e){return false}};
+/* ---- Acesso ---- */
+function show(){let a=U&&me();if(a&&gate(a)){st.del("c-user");U=null;a=null}if(U&&!a){st.del("c-user");U=null}
+ const on=!!U;$("login").style.display=on?"none":"block";$("who").style.display=on?"flex":"none";$("tabs").style.display=on?"flex":"none";
+ Object.values(VIEWS).forEach(id=>$(id).style.display="none");
+ if(on){$("nm").textContent=a.n+(a.role==="admin"?" (equipe)":"");$("del").style.display=a.role==="admin"?"none":"";load();
+  const T=a.role==="admin"?[["cl","Clientes"],["at","Atendimento e reuniões"],["mi","Minutas"]]:[["pay","Contas a pagar"],["min","Minutas de contratos"],["time","Meu time"]];
+  $("tabs").innerHTML=T.map(([k,l])=>`<button data-t="${k}" aria-pressed="false">${l}</button>`).join("");
+  document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>tab(b.dataset.t));tab(T[0][0])}else{setMode("in");initSocial()}}
+function tab(n){Object.entries(VIEWS).forEach(([k,id])=>$(id).style.display=k===n?"block":"none");document.querySelectorAll("#tabs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.t===n));({pay:render,min:minutas,time,cl:admCl,at:admAt,mi:admMi})[n]()}
+function setMode(m){mode=m;const f=(i,v)=>$(i).style.display=v?"":"none",up=m==="up"||m==="adm";
+ f("ln",up);f("lgl",up);f("lpw",m!=="rs");f("lcd",m==="rs2");f("lr",m==="in");f("las",m==="in"&&!Object.values(accts()).some(a=>a.role==="admin"));
+ $("lp").autocomplete=m==="in"?"current-password":"new-password";
+ $("lb").textContent={in:"Entrar",up:"Criar conta",adm:"Criar administrador",rs:"Enviar código por e-mail",rs2:"Redefinir senha"}[m];
+ $("lm").textContent=m==="in"?"Criar conta":"Voltar ao login";
+ $("lt").textContent=m==="adm"?"Primeiro acesso da equipe":(m==="rs"||m==="rs2")?"Redefinir senha":"Área do cliente";$("le2").textContent="";$("le2").style.color=""}
+$("lm").onclick=()=>setMode(mode==="in"?"up":"in");$("lr").onclick=()=>setMode("rs");$("las").onclick=e=>{e.preventDefault();setMode("adm")};
+const OAUTH={google:"",apple:""}; /* Cole aqui o ID de cliente do Google e o ID de serviço da Apple */
+const ls=src=>new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.async=true;s.onload=ok;s.onerror=no;document.head.appendChild(s)});
+const jwt=x=>{try{return JSON.parse(decodeURIComponent(escape(atob(x.split(".")[1].replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){return null}};
+const sm=(x,good)=>{const e=$("le2");e.style.color=good?"var(--pos)":"";e.innerHTML=x};
+const nc=p=>sm("O login com "+p+" ainda não foi ativado neste site: falta cadastrar as credenciais do "+p+" (ID do cliente). Enquanto isso, use e-mail e senha.");
+function social(p,idt){const c=jwt(idt);if(!c||!c.email||String(c.email_verified)==="false")return sm("Não foi possível confirmar o e-mail da sua conta "+p+".");
+ const em=c.email.toLowerCase(),A=accts();if(A[em]&&A[em].role==="admin")return sm("Contas da equipe entram com e-mail e senha.");
+ if(!A[em]){A[em]={n:c.name||em.split("@")[0],s:"",h:"",role:"client",plan:null,status:"pendente",pu:null,lg:new Date().toISOString(),via:p};saveA(A)}
+ const a=A[em],g=gate(a);if(g)return sm(esc(g)+' A equipe Contei libera após a contratação. <a href="'+waL("Olá! Entrei no Contei com "+p+" ("+em+") e quero liberar meu plano.")+'" target="_blank" rel="noopener">Falar no WhatsApp</a>',a.status==="pendente"&&!a.plan);
+ U=em;st.set("c-user",U);show()}
+let gOn=false;
+async function initSocial(){if(gOn||!OAUTH.google)return;try{await ls("https://accounts.google.com/gsi/client");google.accounts.id.initialize({client_id:OAUTH.google,callback:r=>social("Google",r.credential)});$("og").style.display="none";google.accounts.id.renderButton($("gbtn"),{theme:"outline",size:"large",text:"continue_with",locale:"pt-BR",width:300});gOn=true}catch(e){}}
+$("og").onclick=()=>nc("Google");
+$("oa").onclick=async()=>{if(!OAUTH.apple)return nc("Apple");try{await ls("https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/pt_BR/appleid.auth.js");AppleID.auth.init({clientId:OAUTH.apple,scope:"name email",redirectURI:location.origin+location.pathname,usePopup:true});const r=await AppleID.auth.signIn();social("Apple",r.authorization.id_token)}catch(e){sm("Não foi possível entrar com a Apple agora. Tente de novo ou use e-mail e senha.")}};
+$("lf").onsubmit=async e=>{e.preventDefault();const er=$("le2");er.textContent="";er.style.color="";
+ const em=$("le").value.trim().toLowerCase(),pw=$("lp").value,A=accts(),ok=m=>{er.style.color="var(--pos)";er.innerHTML=m};
+ if(!/^\S+@\S+\.\S+$/.test(em))return er.textContent="Informe um e-mail válido.";
+ try{
+  if(mode==="rs"){const ex=!!A[em];if(ex)RC={em,c:String(100000+Math.floor(Math.random()*900000)),x:Date.now()+6e5};setMode("rs2");return ok("Se o e-mail estiver cadastrado, enviaremos um código de 6 dígitos válido por 10 minutos."+(ex?" <b>(Demonstração: seu código é "+RC.c+".)</b>":""))}
+  if(mode==="rs2"){if(!RC||RC.em!==em||Date.now()>RC.x||$("lc").value.trim()!==RC.c)return er.textContent="Código inválido ou expirado.";if(pw.length<6)return er.textContent="A nova senha precisa ter 6 ou mais caracteres.";const s=Math.random().toString(36).slice(2);A[em].s=s;A[em].h=await hs(pw,s);saveA(A);RC=null;setMode("in");return ok("Senha redefinida. Entre com a nova senha.")}
+  if(mode==="up"||mode==="adm"){const nm=$("lnm").value.trim();if(!nm)return er.textContent="Informe seu nome.";if(pw.length<6)return er.textContent="A senha precisa ter 6 ou mais caracteres.";if(!$("lgc").checked)return er.textContent="Aceite a Política de Privacidade para continuar.";if(A[em])return er.textContent="Já existe uma conta com este e-mail. Use Entrar.";
+   const s=Math.random().toString(36).slice(2),ad=mode==="adm";A[em]={n:nm,s,h:await hs(pw,s),role:ad?"admin":"client",plan:null,status:ad?"ativo":"pendente",pu:null,lg:new Date().toISOString()};saveA(A);
+   if(!ad){setMode("in");$("lf").reset();return ok('Cadastro criado. A equipe Contei libera seu acesso após a contratação do plano. <a href="'+waL("Olá! Criei minha conta no Contei com o e-mail "+em+" e quero liberar meu plano.")+'" target="_blank" rel="noopener">Falar no WhatsApp</a>')}}
+  else{const a=A[em];if(!a)return er.textContent="Conta não encontrada. Toque em Criar conta.";if(await hs(pw,a.s)!==a.h)return er.textContent="E-mail ou senha incorretos.";const g=gate(a);if(g){er.innerHTML=esc(g)+' <a href="'+waL("Olá! Preciso de ajuda com meu acesso ao Contei ("+em+").")+'" target="_blank" rel="noopener">Falar no WhatsApp</a>';return}}
+ }catch(x){return er.textContent="Não foi possível validar a senha neste navegador."}
+ U=em;st.set("c-user",U);$("lf").reset();setMode("in");show()};
+$("out").onclick=()=>{st.del("c-user");U=null;show()};
+$("del").onclick=()=>{$("dp").value="";$("de").textContent="";$("dg").showModal()};$("dc").onclick=()=>$("dg").close();$("mc").onclick=()=>$("md").close();
+$("df").onsubmit=async e=>{e.preventDefault();const A=accts(),a=A[U];try{if(!a||await hs($("dp").value,a.s)!==a.h)return $("de").textContent="Senha incorreta."}catch(x){return $("de").textContent="Não foi possível validar a senha neste navegador."}
+ purge(U);delete A[U];saveA(A);$("dg").close();st.del("c-user");U=null;show();const m=$("le2");m.textContent="Sua conta foi excluída.";m.style.color="var(--pos)"};
+/* ---- Cliente: contas a pagar ---- */
+function load(){B=J("c-bills-"+U,[])}function save(){S("c-bills-"+U,B)}
+const gcal=b=>{const d=pd(b.t),e=new Date(d);e.setDate(e.getDate()+1);return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Pagar: "+b.d+" ("+brl(b.v)+")")+"&dates="+f8(d)+"/"+f8(e)+"&details="+encodeURIComponent("Conta registrada no Contei.")};
+const ocal=b=>{const e=pd(b.t);e.setDate(e.getDate()+1);return "https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&allday=true&subject="+encodeURIComponent("Pagar: "+b.d+" ("+brl(b.v)+")")+"&startdt="+b.t+"&enddt="+iso(e)};
+$("bf").onsubmit=e=>{e.preventDefault();const b={id:Date.now()+""+Math.random().toString(36).slice(2,5),d:$("bd").value.trim(),v:+$("bv").value,t:$("bt").value,r:$("br").value==="1",p:false},g=$("bg").checked;B.push(b);save();e.target.reset();$("bg").checked=g;render();if(g)window.open(gcal(b),"_blank","noopener")};
+$("pm").onclick=()=>{cur.setMonth(cur.getMonth()-1);cal()};$("nx").onclick=()=>{cur.setMonth(cur.getMonth()+1);cal()};
+function render(){list();cal();kpi()}
+function kpi(){const t=today(),w=new Date(t);w.setDate(w.getDate()+7);const m=t.getMonth(),y=t.getFullYear(),op=B.filter(b=>!b.p),inM=b=>{const d=pd(b.t);return d.getMonth()===m&&d.getFullYear()===y};
+ $("k1").textContent=op.filter(b=>pd(b.t)>=t&&pd(b.t)<=w).length;$("k2").textContent=op.filter(b=>pd(b.t)<t).length;$("k3").textContent=brl(op.filter(inM).reduce((s,b)=>s+b.v,0));$("k4").textContent=brl(B.filter(b=>b.p&&inM(b)).reduce((s,b)=>s+b.v,0))}
+function list(){const t=today(),L=[...B].sort((a,b)=>a.p-b.p||a.t.localeCompare(b.t));
+ $("list").innerHTML=L.length?L.map(b=>{const late=!b.p&&pd(b.t)<t;return `<div class="bill"><div><b>${esc(b.d)}</b><br><small>Vence ${pd(b.t).toLocaleDateString("pt-BR")}${b.r?" · todo mês":""} · ${brl(b.v)}</small></div><span class="tag ${b.p?"ok":late?"late":""}">${b.p?"Paga":late?"Vencida":"A pagar"}</span>
+ <div class="act">${b.p?"":`<button class="btn sm" data-p="${b.id}">Marcar como paga</button><a class="btn ghost sm" target="_blank" rel="noopener" href="${gcal(b)}">Google Agenda</a><a class="btn ghost sm" target="_blank" rel="noopener" href="${ocal(b)}">Outlook</a>`}<button class="btn ghost sm" data-x="${b.id}">Excluir</button></div></div>`}).join(""):'<p style="color:var(--muted)">Nenhuma conta cadastrada ainda.</p>';
+ document.querySelectorAll("[data-p]").forEach(x=>x.onclick=()=>{const b=B.find(i=>i.id===x.dataset.p);b.p=true;if(b.r)B.push({...b,id:Date.now()+"r",t:addM(b.t),p:false});save();render()});
+ document.querySelectorAll("[data-x]").forEach(x=>x.onclick=()=>{B=B.filter(i=>i.id!==x.dataset.x);save();render()})}
+function cal(){const y=cur.getFullYear(),m=cur.getMonth(),t=today();$("mt").textContent=cur.toLocaleDateString("pt-BR",{month:"long",year:"numeric"});
+ const first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();let h=["D","S","T","Q","Q","S","S"].map(x=>`<span class="h">${x}</span>`).join("")+"<span></span>".repeat(first);
+ for(let d=1;d<=n;d++){const k=iso(new Date(y,m,d)),due=B.filter(b=>!b.p&&b.t===k);h+=`<span class="d${k===iso(t)?" t":""}${due.length?(pd(k)<t?" lt":" due"):""}" ${due.length?`title="${esc(due.map(b=>b.d).join(", "))}"`:""}>${d}</span>`}$("cal").innerHTML=h}
+$("csv").onclick=async()=>{const dl=({save:o=>saveFile(o.filename,o.data)});if(!dl){alert("Exportação indisponível neste ambiente.");return}
+ const rows=[["Descrição","Valor","Vencimento","Situação"],...B.map(b=>[b.d,b.v.toFixed(2).replace(".",","),pd(b.t).toLocaleDateString("pt-BR"),b.p?"Paga":"A pagar"])];
+ try{await dl.save({filename:"contas-contei.csv",data:"\ufeff"+rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(";")).join("\n")})}catch(e){}};
+/* ---- Minutas ---- */
+const DEF=[
+{t:"Contrato de prestação de serviços",c:"Serviços",d:"Para contratar ou prestar um serviço com prazo, preço e rescisão definidos.",x:`CONTRATO DE PRESTAÇÃO DE SERVIÇOS
+
+CONTRATANTE: [nome], CPF/CNPJ [número], [endereço].
+CONTRATADO(A): [nome], CPF/CNPJ [número], [endereço].
+
+CLÁUSULA 1 – OBJETO
+O(A) CONTRATADO(A) prestará ao CONTRATANTE os seguintes serviços: [descrição detalhada].
+
+CLÁUSULA 2 – PRAZO
+Os serviços serão executados de [data] a [data].
+
+CLÁUSULA 3 – PREÇO E PAGAMENTO
+O CONTRATANTE pagará R$ [valor], da seguinte forma: [forma e datas]. O atraso sujeita-se a multa de 2% e juros de 1% ao mês.
+
+CLÁUSULA 4 – OBRIGAÇÕES
+O(A) CONTRATADO(A) executará os serviços com zelo e dentro do prazo. O CONTRATANTE fornecerá as informações necessárias.
+
+CLÁUSULA 5 – RESCISÃO
+Qualquer das partes pode rescindir o contrato mediante aviso prévio escrito de [30] dias.
+
+CLÁUSULA 6 – FORO
+Fica eleito o foro da comarca de [cidade/UF].
+
+[Cidade], [data].
+
+______________________    ______________________
+CONTRATANTE               CONTRATADO(A)
+
+Testemunhas: 1) ______________  2) ______________`},
+{t:"Recibo de pagamento",c:"Financeiro",d:"Comprovante simples de valor recebido.",x:`RECIBO
+
+Valor: R$ [valor] ([valor por extenso])
+
+Recebi de [nome do pagador], CPF/CNPJ [número], a quantia acima, referente a [descrição do serviço ou produto].
+
+Por ser verdade, firmo o presente.
+
+[Cidade], [data].
+
+______________________
+[Nome de quem recebeu]
+CPF/CNPJ [número]`},
+{t:"Acordo de confidencialidade (NDA)",c:"Proteção",d:"Para compartilhar informações sensíveis com parceiros e fornecedores.",x:`ACORDO DE CONFIDENCIALIDADE
+
+PARTE REVELADORA: [nome], CPF/CNPJ [número].
+PARTE RECEPTORA: [nome], CPF/CNPJ [número].
+
+1. As informações confidenciais compartilhadas serão usadas apenas para [finalidade].
+2. A PARTE RECEPTORA não divulgará essas informações a terceiros sem autorização escrita.
+3. Não são confidenciais as informações públicas ou já conhecidas legitimamente pela PARTE RECEPTORA.
+4. A obrigação vale durante a relação entre as partes e por [2] anos após o seu término.
+5. O descumprimento sujeita a parte infratora a perdas e danos e multa de R$ [valor].
+6. Foro: comarca de [cidade/UF].
+
+[Cidade], [data].
+
+______________________    ______________________
+PARTE REVELADORA          PARTE RECEPTORA`},
+{t:"Contrato de compra e venda",c:"Vendas",d:"Para venda de um bem móvel, como equipamento ou veículo.",x:`CONTRATO DE COMPRA E VENDA
+
+VENDEDOR: [nome], CPF/CNPJ [número], [endereço].
+COMPRADOR: [nome], CPF/CNPJ [número], [endereço].
+
+1. O VENDEDOR vende ao COMPRADOR: [descrição do bem, marca, modelo, número de série].
+2. Preço: R$ [valor], pago [à vista / em parcelas de ...].
+3. A entrega ocorrerá em [data], no local [endereço]. Os riscos passam ao COMPRADOR na entrega.
+4. O VENDEDOR declara que o bem é de sua propriedade e está livre de ônus.
+5. Atraso no pagamento: multa de 2% e juros de 1% ao mês.
+6. Foro: comarca de [cidade/UF].
+
+[Cidade], [data].
+
+______________________    ______________________
+VENDEDOR                  COMPRADOR`},
+{t:"Contrato de locação comercial (resumido)",c:"Imóveis",d:"Para alugar uma sala, loja ou galpão. Peça revisão jurídica antes de assinar.",x:`CONTRATO DE LOCAÇÃO COMERCIAL
+
+LOCADOR: [nome], CPF/CNPJ [número].
+LOCATÁRIO: [nome], CPF/CNPJ [número].
+
+1. Imóvel: [endereço completo], destinado à atividade de [atividade].
+2. Prazo: [meses], de [data] a [data].
+3. Aluguel mensal: R$ [valor], com vencimento todo dia [dia]. Reajuste anual pelo [índice].
+4. Garantia: [caução / fiador / seguro-fiança].
+5. O LOCATÁRIO paga [condomínio, IPTU e demais encargos] e conserva o imóvel.
+6. Benfeitorias dependem de autorização escrita do LOCADOR.
+7. Rescisão antecipada pelo LOCATÁRIO: multa de […] aluguel(éis), proporcional ao prazo restante.
+8. Foro: comarca de [cidade/UF].
+
+[Cidade], [data].
+
+______________________    ______________________
+LOCADOR                   LOCATÁRIO`}];
+const MI=()=>{let m=J("c-minutas",null);if(!m){m=DEF.map((x,i)=>({...x,id:"d"+i}));S("c-minutas",m)}return m};
+function minutas(){const M=MI();$("mg").innerHTML=M.length?M.map((m,i)=>`<div class="card"><small style="color:var(--muted);font-weight:600">${esc(m.c)}</small><h3 style="margin:4px 0">${esc(m.t)}</h3><p style="color:var(--muted);margin:0 0 14px">${esc(m.d)}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" data-v="${i}">Visualizar</button><button class="btn ghost sm" data-c="${i}">Copiar</button><button class="btn ghost sm" data-d="${i}">Baixar .txt</button></div></div>`).join(""):'<p class="note">Nenhuma minuta disponível no momento.</p>';
+ document.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>{const m=M[b.dataset.v];$("mh").textContent=m.t;$("mx").textContent=m.x;$("md").showModal()});
+ document.querySelectorAll("[data-c]").forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(M[b.dataset.c].x);b.textContent="Copiado!"}catch(e){b.textContent="Use Visualizar e copie"}setTimeout(()=>b.textContent="Copiar",2000)});
+ document.querySelectorAll("[data-d]").forEach(b=>b.onclick=async()=>{const dl=({save:o=>saveFile(o.filename,o.data)});if(!dl)return alert("Download indisponível neste ambiente. Use Visualizar e copie o texto.");const m=M[b.dataset.d];try{await dl.save({filename:m.t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".txt",data:m.x})}catch(e){}})}
+async function saveFile(fn,data){try{if(window.claude&&claude.use){const d=await claude.use("downloads");if(d){await d.save({filename:fn,data});return}}}catch(e){}
+ try{const b=new Blob([data],{type:"text/plain;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=fn;document.body.appendChild(a);a.click();a.remove()}catch(e){alert("Não foi possível baixar o arquivo.")}}
+/* ---- Atendimentos com protocolo ---- */
+const seq=()=>{const n=(+st.get("c-seq")||0)+1;st.set("c-seq",String(n));return "CT-"+new Date().getFullYear()+"-"+String(n).padStart(5,"0")};
+function newTix(key,role,as,tx,to){const T=J(key,[]),n=new Date().toISOString();T.push({id:Date.now()+"",p:seq(),as,st:"aberto",at:n,m:[{f:role,to,tx,at:n}]});S(key,T)}
+function tixHtml(T,role){return T.length?[...T].reverse().map(t=>`<details class="tix"${t.st==="aberto"?" open":""}><summary><b>${t.p}</b> · ${esc(t.as)} <span class="tag ${t.st==="aberto"?"ok":""}">${t.st==="aberto"?"Aberto":"Encerrado"}</span></summary><div>${t.m.map(m=>`<div class="msg"><b>${m.f==="c"?"Cliente"+(m.to?" → "+esc(m.to):""):"Equipe Contei"}</b> <small style="color:var(--muted)">${fdt(m.at)}</small><br>${esc(m.tx)}</div>`).join("")}${t.st==="aberto"?`<form class="add" data-rf="${t.id}" style="margin-top:10px"><textarea rows="2" maxlength="600" placeholder="Escreva sua mensagem"></textarea><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" type="submit">Enviar</button><button class="btn ghost sm" type="button" data-en="${t.id}">Encerrar atendimento</button></div></form>`:`<p class="note">Atendimento encerrado ${t.by==="c"?"pelo cliente":"pela equipe"} em ${fdt(t.end)}. Para continuar, abra um novo atendimento.</p>`}</div></details>`).join(""):'<p class="note">Nenhum atendimento ainda.</p>'}
+function wireTix(key,role,after){const T=J(key,[]),sv=()=>{S(key,T);after()};
+ document.querySelectorAll("[data-rf]").forEach(f=>f.onsubmit=e=>{e.preventDefault();const tx=f.querySelector("textarea").value.trim(),x=T.find(i=>i.id===f.dataset.rf);if(!tx||!x||x.st!=="aberto")return;x.m.push({f:role,tx,at:new Date().toISOString()});sv()});
+ document.querySelectorAll("[data-en]").forEach(b=>arm(b,()=>{const x=T.find(i=>i.id===b.dataset.en);x.st="encerrado";x.by=role;x.end=new Date().toISOString();sv()}))}
+/* ---- Cliente: Meu time ---- */
+function time(){const a=me(),prem=a.plan==="Premium",rq=J("c-req-"+U,[]),mt=J("c-meet-"+U,[]).sort((x,y)=>x.at.localeCompare(y.at)),now=new Date();
+ const dest=prem?["Advogado dedicado","Administrador dedicado"]:["Equipe Contei (consultoria jurídica)"];
+ const meets=mt.map(m=>{const d=new Date(m.at),e=new Date(d.getTime()+36e5),f=x=>f8(x)+"T"+String(x.getHours()).padStart(2,"0")+String(x.getMinutes()).padStart(2,"0")+"00",past=d<now;
+  return `<div class="msg"><b>${esc(m.sb||"Reunião")}</b> <span class="tag${past?"":" ok"}">${past?"Encerrada":"Agendada"}</span><br><small style="color:var(--muted)">${esc(m.pl)} · ${fdt(m.at)}</small>${past?"":`<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><a class="btn sm" target="_blank" rel="noopener noreferrer" href="${esc(m.url)}">Entrar na reunião</a><a class="btn ghost sm" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent((m.sb||"Reunião")+" (Contei)")}&dates=${f(d)}/${f(e)}&details=${encodeURIComponent(m.url)}">Adicionar à agenda</a></div>`}</div>`}).join("")||'<p class="note">Nenhuma reunião agendada.</p>';
+ const reqs=rq.map(r=>`<div class="msg"><b>${esc(r.sb)}</b> <span class="tag ${r.st==="atendida"?"ok":""}">${r.st==="atendida"?"Atendido":"Aguardando"}</span><br><small style="color:var(--muted)">Preferência: ${r.pf?fdt(r.pf):"a combinar"}</small></div>`).join("");
+ $("tm").innerHTML=`<div class="card" style="margin-bottom:20px">Seu plano: <b>${esc(a.plan)}</b> · mensalidade paga até <b>${pd(a.pu).toLocaleDateString("pt-BR")}</b></div><div class="grid"><div class="card"><h3>Atendimento por chat</h3><p style="color:var(--muted);margin:6px 0 0">Cada conversa gera um protocolo. Você ou a equipe podem encerrar o atendimento.</p><form class="add" id="cf"><label>Falar com<select id="cto">${dest.map(d=>`<option>${d}</option>`).join("")}</select></label><label>Assunto<input id="cas" maxlength="80"></label><label>Mensagem<textarea id="cx" rows="3" maxlength="600"></textarea></label><button class="btn" type="submit">Abrir atendimento e gerar protocolo</button></form><div style="margin-top:14px">${tixHtml(J("c-tix-"+U,[]),"c")}</div></div>
+ <div class="card"><h3>Reuniões</h3>${prem?`<p style="color:var(--muted);margin:6px 0 0">As reuniões são marcadas pelos profissionais. Solicite um horário e o link aparece aqui.</p>
+ <form class="add" id="qf"><label>Assunto<input id="qs" maxlength="60" placeholder="Ex.: Revisão do contrato"></label><label>Melhor data e hora<input id="qw" type="datetime-local"></label><button class="btn" type="submit">Solicitar reunião</button></form><div style="margin-top:14px">${reqs}${meets}</div>`
+ :`<p style="color:var(--muted)">Solicitar reuniões e acessar o link da chamada é exclusivo do plano Premium.</p><a class="btn" target="_blank" rel="noopener" href="${waL("Olá! Quero fazer upgrade para o plano Premium do Contei.")}">Quero o Premium</a>`}</div></div>`;
+ $("cf").onsubmit=e=>{e.preventDefault();const tx=$("cx").value.trim(),as=$("cas").value.trim();if(!tx||!as)return;newTix("c-tix-"+U,"c",as,tx,$("cto").value);time()};wireTix("c-tix-"+U,"c",time);
+ if(prem)$("qf").onsubmit=e=>{e.preventDefault();const sb=$("qs").value.trim();if(!sb)return;const x=J("c-req-"+U,[]);x.push({id:Date.now()+"",sb,pf:$("qw").value?new Date($("qw").value).toISOString():"",st:"aberta"});S("c-req-"+U,x);time()}}
+/* ---- Admin ---- */
+function admCl(){const A=accts(),rows=Object.entries(A).filter(([,a])=>a.role!=="admin"),m=t=>{$("amsg").textContent=t};m("");
+ $("ctb").innerHTML=rows.length?`<table class="tbl"><thead><tr><th>Cliente</th><th>Plano</th><th>Situação</th><th>Mensalidade até</th><th>Ações</th></tr></thead><tbody>`+rows.map(([em,a])=>{const s=sit(a),e=esc(em);return `<tr><td><b>${esc(a.n)}</b><br><small>${e}</small></td><td><select data-pl="${e}"><option value="">Sem plano</option>${PL.map(p=>`<option${a.plan===p?" selected":""}>${p}</option>`).join("")}</select></td><td><span class="tag ${s[1]}">${s[0]}</span></td><td><input type="date" data-pu="${e}" value="${a.pu||""}"></td><td style="white-space:nowrap">${a.status==="pendente"?`<button class="btn sm" data-ac="${e}">Ativar</button> `:`<button class="btn ghost sm" data-ps="${e}">${a.status==="pausado"?"Reativar":"Pausar"}</button> `}<button class="btn ghost sm" data-rn="${e}">Renovar +1 mês</button> <button class="btn ghost sm" data-dx="${e}">Excluir</button></td></tr>`}).join("")+"</tbody></table>":'<p class="note">Nenhum cliente cadastrado.</p>';
+ const up=(em,fn)=>{const A=accts();fn(A[em]);saveA(A);admCl()};
+ document.querySelectorAll("[data-pl]").forEach(x=>x.onchange=()=>up(x.dataset.pl,a=>a.plan=x.value||null));
+ document.querySelectorAll("[data-pu]").forEach(x=>x.onchange=()=>up(x.dataset.pu,a=>a.pu=x.value||null));
+ document.querySelectorAll("[data-ac]").forEach(x=>x.onclick=()=>{const a=accts()[x.dataset.ac];if(!a.plan||!a.pu)return m("Defina o plano e a data da mensalidade antes de ativar.");up(x.dataset.ac,a=>a.status="ativo")});
+ document.querySelectorAll("[data-ps]").forEach(x=>x.onclick=()=>up(x.dataset.ps,a=>a.status=a.status==="pausado"?"ativo":"pausado"));
+ document.querySelectorAll("[data-rn]").forEach(x=>x.onclick=()=>up(x.dataset.rn,a=>{const t=iso(today());a.pu=addM(a.pu&&a.pu>=t?a.pu:t);if(a.status==="pendente"&&a.plan)a.status="ativo"}));
+ document.querySelectorAll("[data-dx]").forEach(x=>arm(x,()=>{const A=accts();delete A[x.dataset.dx];saveA(A);purge(x.dataset.dx);admCl()}))}
+$("cf2").onsubmit=async e=>{e.preventDefault();const A=accts(),em=$("ae").value.trim().toLowerCase(),m=$("amsg");m.textContent="";
+ if(!$("an").value.trim()||!/^\S+@\S+\.\S+$/.test(em))return m.textContent="Informe nome e e-mail válidos.";if(A[em])return m.textContent="Já existe um cadastro com este e-mail.";
+ if($("ap").value.length<6)return m.textContent="A senha provisória precisa ter 6 ou mais caracteres.";if(!$("apl").value||!$("apu").value)return m.textContent="Escolha o plano e a data da mensalidade.";
+ const s=Math.random().toString(36).slice(2);A[em]={n:$("an").value.trim(),s,h:await hs($("ap").value,s),role:"client",plan:$("apl").value,status:"ativo",pu:$("apu").value,lg:null};saveA(A);e.target.reset();$("apu").value=addM(iso(today()));admCl()};
+function admAt(){const A=accts(),cl=Object.entries(A).filter(([,a])=>a.role!=="admin"),v=$("ac").value;
+ $("ac").innerHTML=cl.map(([e,a])=>`<option value="${esc(e)}">${esc(a.n)} – ${esc(e)}</option>`).join("");if(v)$("ac").value=v;const em=$("ac").value;
+ if(!em){$("atb").innerHTML='<p class="note">Nenhum cliente cadastrado.</p>';return}
+ const a=A[em],rq=J("c-req-"+em,[]),mt=J("c-meet-"+em,[]).sort((x,y)=>x.at.localeCompare(y.at)),prem=a.plan==="Premium";
+ $("atb").innerHTML=`<div class="grid" style="margin-top:16px"><div class="card"><h3>Atendimentos</h3><form class="add" id="rf"><label>Assunto<input id="ras" maxlength="80"></label><label>Mensagem<textarea id="rx" rows="3" maxlength="600"></textarea></label><button class="btn" type="submit">Abrir atendimento (equipe)</button></form><div style="margin-top:14px">${tixHtml(J("c-tix-"+em,[]),"e")}</div></div>
+ <div class="card"><h3>Reuniões</h3>${prem?`<div>${rq.map(r=>`<div class="msg"><b>Pedido: ${esc(r.sb)}</b> <span class="tag ${r.st==="atendida"?"ok":""}">${r.st==="atendida"?"Atendido":"Aguardando"}</span><br><small style="color:var(--muted)">Preferência: ${r.pf?fdt(r.pf):"a combinar"}</small>${r.st==="atendida"?"":` <button class="btn ghost sm" data-ra="${r.id}">Marcar atendido</button>`}</div>`).join("")||'<p class="note">Nenhum pedido.</p>'}</div>
+ <form class="add" id="sf" style="margin-top:14px"><label>Plataforma<select id="sp"><option>Google Meet</option><option>Zoom</option><option>Outra</option></select></label><label>Link da reunião<input id="sl" type="url" placeholder="https://meet.google.com/..."></label><div class="row"><label>Data e hora<input id="swd" type="datetime-local"></label><label>Assunto<input id="ss" maxlength="60"></label></div><div id="se" class="neg" role="alert"></div><button class="btn" type="submit">Agendar para o cliente</button></form>
+ <div style="margin-top:14px">${mt.map(m=>`<div class="msg"><b>${esc(m.sb||"Reunião")}</b> · ${esc(m.pl)} · ${fdt(m.at)} <button class="btn ghost sm" data-rm="${m.id}">Remover</button></div>`).join("")}</div>`:'<p class="note">Reuniões são exclusivas do plano Premium. Este cliente está no plano '+esc(a.plan||"—")+'.</p>'}</div></div>`;
+ $("rf").onsubmit=e=>{e.preventDefault();const tx=$("rx").value.trim(),as=$("ras").value.trim();if(!tx||!as)return;newTix("c-tix-"+em,"e",as,tx,"");admAt()};wireTix("c-tix-"+em,"e",admAt);
+ document.querySelectorAll("[data-ra]").forEach(b=>b.onclick=()=>{rq.find(r=>r.id===b.dataset.ra).st="atendida";S("c-req-"+em,rq);admAt()});
+ document.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{S("c-meet-"+em,mt.filter(x=>x.id!==b.dataset.rm));admAt()});
+ if(prem)$("sf").onsubmit=e=>{e.preventDefault();const p=$("sp").value,u=$("sl").value.trim();if(!$("swd").value)return $("se").textContent="Informe data e hora.";if(!okUrl(p,u))return $("se").textContent=p==="Outra"?"Informe um link que comece com https://.":"O link não parece ser do "+p+".";mt.push({id:Date.now()+"",pl:p,url:u,at:new Date($("swd").value).toISOString(),sb:$("ss").value.trim()});S("c-meet-"+em,mt);admAt()}}
+$("ac").onchange=admAt;
+function admMi(){const M=MI();$("xl").innerHTML=M.map(m=>`<div class="bill"><div><b>${esc(m.t)}</b><br><small>${esc(m.c)} · ${esc(m.d)}</small></div><span></span><div class="act"><button class="btn ghost sm" data-xe="${m.id}">Editar</button><button class="btn ghost sm" data-xd="${m.id}">Excluir</button></div></div>`).join("")||'<p class="note">Nenhuma minuta.</p>';
+ document.querySelectorAll("[data-xe]").forEach(b=>b.onclick=()=>{const m=M.find(x=>x.id===b.dataset.xe);$("xi").value=m.id;$("xt").value=m.t;$("xc").value=m.c;$("xd").value=m.d;$("xx").value=m.x;$("xb").textContent="Salvar alterações";scrollTo({top:0,behavior:"smooth"})});
+ document.querySelectorAll("[data-xd]").forEach(b=>arm(b,()=>{S("c-minutas",MI().filter(x=>x.id!==b.dataset.xd));admMi()}))}
+$("mf2").onsubmit=e=>{e.preventDefault();const M=MI(),id=$("xi").value,o={t:$("xt").value.trim(),c:$("xc").value.trim()||"Geral",d:$("xd").value.trim(),x:$("xx").value};if(!o.t||!o.x)return;
+ if(id){const i=M.findIndex(x=>x.id===id);M[i]={...M[i],...o}}else M.push({...o,id:"m"+Date.now()});S("c-minutas",M);e.target.reset();$("xi").value="";$("xb").textContent="Adicionar minuta";admMi()};
+$("apu").value=addM(iso(today()));
+show();
+
+})();</script>
+<script>(function(){
+function route(){var a=location.hash==="#area-cliente";
+ document.getElementById("site").style.display=a?"none":"";
+ document.getElementById("portal").style.display=a?"block":"none";
+ document.title=a?"Área do cliente – Contei":"Contei – assessoria jurídica e financeira para pequenos negócios";
+ if(a){window.scrollTo(0,0)}else if(location.hash.length>1){var t=document.getElementById(location.hash.slice(1));if(t)t.scrollIntoView()}}
+addEventListener("hashchange",route);route();
+document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest("[data-pv]");if(t){e.preventDefault();document.getElementById("pv").showModal()}});
+document.getElementById("pvc").onclick=function(){document.getElementById("pv").close()}})();</script>
+</body>
+</html>
